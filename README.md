@@ -30,3 +30,18 @@ JavaWeb 作业，即简单的酒店管理系统。
 
 附2：数据库默认登录账号 root toor
 
+
+# 系统运行截图
+
+### 登陆界面
+![登陆](https://github.com/AwadYoo/hotelbook-JavaWeb/blob/master/assets/login.png)
+### 主页
+![主页](https://github.com/AwadYoo/hotelbook-JavaWeb/blob/master/assets/mainpage.png)
+### 预订客房
+![预订客房](https://github.com/AwadYoo/hotelbook-JavaWeb/blob/master/assets/roomOrder.png)
+### 订单列表
+![订单列表](https://github.com/AwadYoo/hotelbook-JavaWeb/blob/master/assets/orderList.png)
+### 客房配置
+![客房配置](https://github.com/AwadYoo/hotelbook-JavaWeb/blob/master/assets/sys.png)
+### 权限日志
+![权限日志](https://github.com/AwadYoo/hotelbook-JavaWeb/blob/master/assets/auth.png)
