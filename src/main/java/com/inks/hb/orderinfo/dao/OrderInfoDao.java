@@ -35,7 +35,7 @@ public class OrderInfoDao implements CommonDao {
 
         Connection conn = DBUtil.getConnection();
 
-        String sql = "INSERT INTO orderinfo VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO orderInfo VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
         PreparedStatement pstmt = conn.prepareStatement(sql);
         pstmt.setString(1, orderInfo.getOrderId());
@@ -69,7 +69,7 @@ public class OrderInfoDao implements CommonDao {
 
         Connection conn = DBUtil.getConnection();
 
-        String sql = "DELETE FROM orderinfo WHERE orderId = ?";
+        String sql = "DELETE FROM orderInfo WHERE orderId = ?";
         PreparedStatement pstmt = conn.prepareStatement(sql);
         pstmt.setString(1, orderInfo.getOrderId());
 
@@ -83,7 +83,7 @@ public class OrderInfoDao implements CommonDao {
 
         Connection conn = DBUtil.getConnection();
 
-        String sql = "UPDATE orderinfo SET orderName = ? ,orderPhone = ? ,orderIDcard = ? ,typeId = ? " +
+        String sql = "UPDATE orderInfo SET orderName = ? ,orderPhone = ? ,orderIDcard = ? ,typeId = ? " +
                 ",arrireDate = ? ,leaveDate = ? ,orderState = ? ,checkNum = ? ,roomId = ? ,price = ? ,checkPrice = ? " +
                 ",discount = ? ,discountReason = ? ,addBed = ? ,addBedPrice = ? ,orderMoney = ? ,remark = ? " +
                 ",operatorId = ? WHERE orderId = ?";
@@ -118,7 +118,7 @@ public class OrderInfoDao implements CommonDao {
 
         Connection conn = DBUtil.getConnection();
 
-        String sql = "select count(*) from orderinfo;";
+        String sql = "select count(*) from orderInfo;";
         PreparedStatement pstmt = conn.prepareStatement(sql);
         ResultSet rs = pstmt.executeQuery();
 
@@ -137,7 +137,7 @@ public class OrderInfoDao implements CommonDao {
 
         Connection conn = DBUtil.getConnection();
 
-        String sql = "select * from orderinfo limit ?, ?;";
+        String sql = "select * from orderInfo limit ?, ?;";
         PreparedStatement pstmt = conn.prepareStatement(sql);
         pstmt.setInt(1, start - 1);
         pstmt.setInt(2, length);
@@ -170,7 +170,7 @@ public class OrderInfoDao implements CommonDao {
         Connection conn = DBUtil.getConnection();
 
         //根据ID的查询
-        String sql = "SELECT * FROM orderinfo WHERE orderId = ?";
+        String sql = "SELECT * FROM orderInfo WHERE orderId = ?";
         PreparedStatement pstmt = conn.prepareStatement(sql);
         pstmt.setString(1, orderInfoQuery.getOrderId());
         ResultSet rs = pstmt.executeQuery();
@@ -209,9 +209,9 @@ public class OrderInfoDao implements CommonDao {
 
         String sql;
         if (make == 1)
-            sql = "select * from orderinfo WHERE orderName LIKE ?;";
+            sql = "select * from orderInfo WHERE orderName LIKE ?;";
         else
-            sql = "select * from orderinfo WHERE typeId LIKE ?;";
+            sql = "select * from orderInfo WHERE typeId LIKE ?;";
         PreparedStatement pstmt = conn.prepareStatement(sql);
         pstmt.setString(1, "%" + select + "%");
 

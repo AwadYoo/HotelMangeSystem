@@ -56,7 +56,7 @@ public class InsertAndUpdateServlet extends HttpServlet {
             discount = 0;
         }
 
-        OrderInfo orderInfo = new OrderInfo(orderId, orderName, orderPhone, orderIDcard, typeId, arrireDate, leaveDate, orderState, checkNum, roomId, price, checkPrice, discount, discountReason, addBed, addBedPrice, orderMoney, remark, operatorId);
+        OrderInfo orderInfo = new OrderInfo(orderId + Math.random(), orderName, orderPhone, orderIDcard, typeId, arrireDate, leaveDate, orderState, checkNum, roomId, price, checkPrice, discount, discountReason, addBed, addBedPrice, orderMoney, remark, operatorId);
 
         int code = -1; //返回的状态
 

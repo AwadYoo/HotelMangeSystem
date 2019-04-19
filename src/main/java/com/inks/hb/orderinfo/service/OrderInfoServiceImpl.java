@@ -17,7 +17,7 @@ public class OrderInfoServiceImpl implements OrderInfoService {
 
         try {
             String orderId = orderInfo.getOrderId();
-            if (queryRepeat(orderId, orderId) != 1)
+            if (queryRepeat(orderId) != 1)
                 return 0;
             dao.insertData(orderInfo);
         } catch (SQLException e) {
@@ -113,14 +113,14 @@ public class OrderInfoServiceImpl implements OrderInfoService {
     }
 
     @Override
-    public int queryRepeat(String newName, String oldName) {
+    public int queryRepeat(String newName) {
         OrderInfo orderInfoQuery = new OrderInfo();
         orderInfoQuery.setOrderId(newName);
         OrderInfo orderInfo;
         try {
             orderInfo = (OrderInfo) dao.query(orderInfoQuery);
             if (!orderInfo.isNull()) {
-                if (orderInfo.getOrderId().equals(oldName))
+                if (orderInfo.getOrderId().equals(newName))
                     return 2; //和旧名称重复
                 return 0; //重复
             } else
@@ -130,5 +130,6 @@ public class OrderInfoServiceImpl implements OrderInfoService {
             return -1; //异常
         }
     }
+
 
 }

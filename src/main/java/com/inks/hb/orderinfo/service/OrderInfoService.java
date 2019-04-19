@@ -38,6 +38,8 @@ public interface OrderInfoService {
      * @param newName oldName 房间类型名称
      * @return 0:已经存在 1：未存在 2：与自身相同
      */
-    int queryRepeat(String newName, String oldName);
+    //int queryRepeat(String newName, String oldName);
+
+    int queryRepeat(String newName);
 }
 
