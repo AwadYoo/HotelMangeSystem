@@ -14,7 +14,7 @@ Win10-UI layui 和  bootstrap
 
 ## 二、介绍
 
-项目具体说明：[【Wiki】](https://github.com/inkss/hotelbook-JavaWeb/wiki)
+项目具体说明：[【Wiki】](https://github.com/AwadYoo/hotelbook-JavaWeb/wiki)
 
 JavaWeb 作业，即简单的酒店管理系统。
 
