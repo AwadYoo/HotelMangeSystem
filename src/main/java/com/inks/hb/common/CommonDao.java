@@ -4,8 +4,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
- * 本文件是一个公共的DAO接口，相同Dao的调用关系集合。
- * 在此之前已经完成Login、floorInfo、authInfo，如果有时间，就改造他们的函数。
+ * 本文件是一个公共的DAO接口，相同Dao的调用关系集合。注意数据库大小写问题 * 在此之前已经完成Login、floorInfo、authInfo，如果有时间，就改造他们的函数。
  * 1.增 添加单条数据
  * 2.删 根据XXX删单条数据
  * 3.改 根据XXX改单条数据
